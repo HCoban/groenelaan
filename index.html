@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geen Rotonde op de Groenelaan - Dien uw zienswijze in</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background-color: #f7fafc;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e4d2b 0%, #2d6a3e 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .deadline-banner {
+            background-color: #e53e3e;
+            color: white;
+            padding: 15px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #f39c12;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 18px 40px;
+            margin-top: 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+        }
+
+        section {
+            background: white;
+            margin: 30px auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1e4d2b;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #2d6a3e;
+        }
+
+        h3 {
+            color: #2d6a3e;
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+        }
+
+        h4 {
+            color: #2d6a3e;
+            font-size: 1.2rem;
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background-color: #fef5e7;
+            border-left: 5px solid #f39c12;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .stat-description {
+            font-size: 1rem;
+        }
+
+        .template-box {
+            background-color: #edf2f7;
+            border: 2px solid #2d6a3e;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .copy-button {
+            background-color: #2d6a3e;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .copy-button:hover {
+            background-color: #1e4d2b;
+        }
+
+        .copy-button.copied {
+            background-color: #38a169;
+        }
+
+        .template-text {
+            white-space: pre-wrap;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            background-color: white;
+            color: #2d3748;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #cbd5e0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2d6a3e 0%, #1e4d2b 100%);
+            color: white;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border-bottom-color: white;
+        }
+
+        .cta-section h3 {
+            color: #f0fff4;
+        }
+
+        .submission-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .method-card {
+            background-color: rgba(255,255,255,0.95);
+            color: #2d3748;
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: transform 0.2s;
+        }
+
+        .method-card:hover {
+            transform: translateY(-4px);
+            border-color: #f39c12;
+        }
+
+        .method-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .method-card h4 {
+            color: #1e4d2b;
+            text-align: center;
+            font-size: 1.4rem;
+            margin: 10px 0 15px 0;
+        }
+
+        .method-card p {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: #2d3748;
+        }
+
+        .method-card a {
+            color: #f39c12;
+            text-decoration: none;
+            word-wrap: break-word;
+        }
+
+        .method-card a:hover {
+            text-decoration: underline;
+        }
+
+        .send-info {
+            background-color: #fef5e7;
+            color: #2d3748;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .send-info strong {
+            color: #1e4d2b;
+        }
+
+        .sources {
+            background-color: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .sources a {
+            color: #2d6a3e;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .sources a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .anchor-link {
+            scroll-margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            section {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .template-text {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Geen Rotonde op de Groenelaan</h1>
+            <p style="font-size: 1.3rem; margin-top: 10px;">Rotondes zijn bewezen gevaarlijk voor fietsers</p>
+            <div class="deadline-banner">
+                Dien uw zienswijze in vóór 24 december 2025
+            </div>
+            <a href="#actie" class="cta-button">Direct naar Template →</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="situatie" class="anchor-link">
+            <h2>De Situatie</h2>
+            <p>De gemeente Amstelveen is van plan om bij de herinrichting van de Groenelaan een rotonde aan te leggen. Dit terwijl wetenschappelijk onderzoek aantoont dat rotondes zeer gevaarlijk zijn voor fietsers, en ongevallen in Amstelveen zelf met 50% zijn gestegen.</p>
+
+            <h3>Waarom zijn rotondes zo gevaarlijk?</h3>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">20x</div>
+                    <div class="stat-description">meer ongevallen op rotondes dan andere kruispunten</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-description">stijging ongevallen op Amstelveense rotondes in 2024</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">27%</div>
+                    <div class="stat-description">meer fietsongevallen na aanleg rotondes (België)</div>
+                </div>
+            </div>
+
+            <ul>
+                <li><strong>20x meer ongevallen:</strong> Volgens <a href="https://www.hartvannederland.nl/112/artikelen/fietsers-verongelukken-veel-vaker-op-rotondes" target="_blank">onderzoek van VIA (2022)</a> vertegenwoordigen rotondes slechts 0,6% van alle kruispunten in Nederland, maar vinden er 12% van alle fietsongevallen plaats</li>
+                <li><strong>Ernstige en dodelijke ongevallen:</strong> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0001457507001352" target="_blank">Wetenschappelijk onderzoek</a> toont dat rotondes leiden tot 41-46% meer ernstige of dodelijke fietsongevallen - niet alleen meer ongevallen, maar vooral gevaarlijkere</li>
+                <li><strong>50% stijging in Amstelveen:</strong> Het aantal ongevallen op Amstelveense rotondes <a href="https://herbertraat.com/2025/01/13/rotondes-amstelveen-onder-de-loep-door-swov/" target="_blank">steeg in 2024 met bijna 50% ten opzichte van 2023</a>. De gemeente neemt deel aan grootschalig onderzoek naar rotonde-veiligheid waarvan de resultaten nog niet bekend zijn</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3 style="margin-top: 0;">Ons verzoek</h3>
+                <p style="margin-bottom: 0;"><strong>Bouw geen rotonde voordat de veiligheid is aangetoond.</strong> Er loopt nu onderzoek naar rotonde-veiligheid waarvan de resultaten nog niet beschikbaar zijn. Wachten tot deze kennis beschikbaar is kan het ontwerp veiliger maken en levens redden.</p>
+            </div>
+        </section>
+
+        <section id="actie" class="cta-section anchor-link">
+            <h2>Wat kunt u doen?</h2>
+            <p>Het concept-verkeersbesluit ligt ter inzage tot 24 december 2025. U kunt een zienswijze indienen om uw bezwaren kenbaar te maken.</p>
+
+            <h3>Hoe dient u uw zienswijze in?</h3>
+            <p>Kies één van de drie officiële methoden:</p>
+
+            <div class="submission-methods">
+                <div class="method-card">
+                    <div class="method-icon">🌐</div>
+                    <h4>Online</h4>
+                    <p>Vul het formulier in op de website van de gemeente. U kunt de template kopiëren en plakken, of als document uploaden.</p>
+                    <p><strong>Indienen met DigiD:</strong><br>
+                    <a href="https://www.amstelveen.nl/zienswijze-indienen" target="_blank" style="color: #f39c12; font-weight: bold;">www.amstelveen.nl/zienswijze-indienen</a></p>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">📞</div>
+                    <h4>Telefoon</h4>
+                    <p>Bel de gemeente voor een afspraak om uw zienswijze persoonlijk in te dienen.</p>
+                    <p><strong>Telefoonnummer:</strong><br>
+                    <a href="tel:0205404911" style="color: #f39c12; font-weight: bold;">020 540 49 11</a></p>
+                    <p><em>Print de template en neem deze mee naar uw afspraak.</em></p>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">✉️</div>
+                    <h4>Per Post</h4>
+                    <p>Stuur een brief naar de gemeente. Print de template, vul deze in, en vergeet niet te ondertekenen.</p>
+                    <p><strong>Adres:</strong><br>
+                    College van burgemeester en wethouders<br>
+                    Postbus 4<br>
+                    1180 BA Amstelveen</p>
+                </div>
+            </div>
+
+            <h3>Template Zienswijze</h3>
+            <p>Gebruik deze template voor alle drie de methoden. Voor online: kopieer en plak. Voor telefoon/post: print en vul in.</p>
+
+            <div class="template-box">
+                <button class="copy-button" onclick="copyTemplate()">📋 Kopieer Template</button>
+                <button class="copy-button" onclick="printTemplate()" style="margin-left: 10px;">🖨️ Print Template</button>
+                <div class="template-text" id="templateText">[Uw naam]
+[Uw adres]
+[Postcode en plaats]
+[Datum: DD-MM-2025]
+
+Betreft: Zienswijze op concept-verkeersbesluit herinrichting Groenelaan
+
+Geachte college van burgemeester en wethouders,
+
+Ik dien hierbij een zienswijze in tegen het concept-verkeersbesluit voor de herinrichting van de Groenelaan, specifiek met betrekking tot de timing van de aanleg van de voorgestelde rotonde.
+
+Mijn bezwaren:
+
+1. Volgens het VIA-onderzoek uit 2022 vertegenwoordigen rotondes slechts 0,6% van alle kruispunten in Nederland, maar vinden er 12% van alle fietsongevallen plaats - een 20-voudige overrepresentatie.
+
+2. Het aantal ongevallen op Amstelveense rotondes is in 2024 met bijna 50% gestegen ten opzichte van 2023, waarbij vaak fietsers betrokken waren.
+
+3. De gemeente Amstelveen neemt deel aan het grootschalige SWOV-onderzoek naar de veiligheid van rotondes voor fietsers, waarvan de resultaten nog niet beschikbaar zijn. Het is onlogisch om vóór de publicatie van deze onderzoeksresultaten een nieuwe rotonde aan te leggen.
+
+4. Internationaal onderzoek uit België toont aan dat rotondes leiden tot een stijging van 27% in fietsongevallen, met 41-46% meer ernstige of dodelijke ongevallen.
+
+5. Wachten tot de onderzoeksresultaten beschikbaar zijn maakt het mogelijk om het definitieve ontwerp te baseren op de nieuwste wetenschappelijke inzichten over rotonde-veiligheid.
+
+Mijn verzoek:
+
+Ik verzoek de gemeente om de aanleg van de rotonde uit te stellen tot na publicatie van de SWOV-onderzoeksresultaten, zodat het definitieve ontwerp kan profiteren van deze nieuwe kennis over rotonde-veiligheid.
+
+Met vriendelijke groet,
+
+[Handtekening - alleen bij post/fysiek]
+[Uw naam]</div>
+            </div>
+        </section>
+
+        <section id="bronnen" class="anchor-link">
+            <h2>Bronnen en onderzoek</h2>
+
+            <div class="sources">
+                <h3>VIA Onderzoek 2022</h3>
+                <p>Verkeerskundig ICT-bureau VIA publiceerde in mei 2022 onderzoek waaruit blijkt dat rotondes 0,6% van alle kruispunten vertegenwoordigen, maar 12% van alle fietsongevallen.</p>
+                <p><a href="https://www.hartvannederland.nl/112/artikelen/fietsers-verongelukken-veel-vaker-op-rotondes" target="_blank">Hart van Nederland - Fietsers verongelukken veel vaker op rotondes</a></p>
+            </div>
+
+            <div class="sources">
+                <h3>SWOV Onderzoek (Lopend)</h3>
+                <p>De Stichting Wetenschappelijk Onderzoek Verkeersveiligheid voert momenteel grootschalig onderzoek uit naar ontwerpelementen die de veiligheid van kwetsbare verkeerdeelnemers op rotondes beïnvloeden. 40 gemeenten nemen deel, waaronder Amstelveen. De resultaten zijn nog niet beschikbaar.</p>
+
+                <h4>Links:</h4>
+                <ul>
+                    <li><a href="https://swov.nl/nl/nieuws/groot-onderzoek-naar-veiligheid-rotondes-voor-fietsers-en-voetgangers-2025" target="_blank">SWOV grootschalig onderzoek naar veiligheid rotondes</a></li>
+                    <li><a href="https://herbertraat.com/2025/01/13/rotondes-amstelveen-onder-de-loep-door-swov/" target="_blank">Herbert Raat: Rotondes Amstelveen onder de loep door SWOV</a></li>
+                </ul>
+            </div>
+
+            <div class="sources">
+                <h3>Belgisch Onderzoek</h3>
+                <p>Onderzoek in België toont dat conversie van kruispunten naar rotondes resulteerde in 27% meer fietsongevallen, met 41-46% toename in ernstige of dodelijke ongevallen.</p>
+                <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0001457507001352" target="_blank">ScienceDirect - Accident Analysis & Prevention: An evaluation of the safety effects of roundabouts</a></p>
+            </div>
+
+            <div class="sources">
+                <h3>Amstelveen Statistieken 2024</h3>
+                <p>Volgens wethouder Herbert Raat: <em>"Het aantal ongevallen, met en zonder letsel, op de Amstelveense rotondes steeg in 2024 met bijna 50 procent ten opzichte van 2023."</em></p>
+                <p>Wethouder Raat heeft zelf aangegeven: <em>"Hierin nemen we de resultaten van het SWOV-onderzoek uiteraard mee."</em></p>
+                <p><a href="https://herbertraat.com/2025/01/13/rotondes-amstelveen-onder-de-loep-door-swov/" target="_blank">Herbert Raat - Rotondes Amstelveen onder de loep door SWOV</a></p>
+            </div>
+        </section>
+
+        <section id="over" class="anchor-link">
+            <h2>Over deze website</h2>
+            <p>Deze website is opgezet door een bezorgde burger om bewustwording te creëren over de verkeersveiligheidsrisico's van rotondes voor fietsers.</p>
+
+            <p><strong>Waarom deze website?</strong><br>
+            Met 50% meer ongevallen op Amstelveense rotondes in 2024 en een lopend SWOV-onderzoek waar Amstelveen zelf aan deelneemt, is het urgent om de gemeente te vragen te wachten op de onderzoeksresultaten voordat een nieuwe rotonde wordt aangelegd.</p>
+
+            <p><strong>Bronnen:</strong><br>
+            Alle informatie is gebaseerd op wetenschappelijk onderzoek van SWOV, VIA, en internationale verkeersveiligheidsinstituten. Zie de sectie "Bronnen en onderzoek" voor volledige referenties.</p>
+
+            <p><em>Dit is een onafhankelijk burgerinitiatief, niet gelieerd aan de gemeente Amstelveen of andere officiële instanties.</em></p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Onafhankelijk burgerinitiatief • Laatste update: 5 december 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyTemplate() {
+            const templateText = document.getElementById('templateText').innerText;
+            const buttons = document.querySelectorAll('.copy-button');
+            const copyButton = buttons[0];
+
+            navigator.clipboard.writeText(templateText).then(function() {
+                copyButton.textContent = '✓ Gekopieerd!';
+                copyButton.classList.add('copied');
+
+                setTimeout(function() {
+                    copyButton.textContent = '📋 Kopieer Template';
+                    copyButton.classList.remove('copied');
+                }, 2000);
+            }, function(err) {
+                console.error('Kon niet kopiëren: ', err);
+                alert('Kopiëren mislukt. Selecteer de tekst handmatig en kopieer met Ctrl+C of Cmd+C');
+            });
+        }
+
+        function printTemplate() {
+            const templateText = document.getElementById('templateText').innerText;
+            const printWindow = window.open('', '', 'height=600,width=800');
+
+            printWindow.document.write('<html><head><title>Zienswijze Groenelaan</title>');
+            printWindow.document.write('<style>');
+            printWindow.document.write('body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.8; }');
+            printWindow.document.write('pre { white-space: pre-wrap; font-family: Arial, sans-serif; font-size: 12pt; }');
+            printWindow.document.write('</style>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write('<pre>' + templateText + '</pre>');
+            printWindow.document.write('</body></html>');
+
+            printWindow.document.close();
+            printWindow.focus();
+
+            setTimeout(function() {
+                printWindow.print();
+                printWindow.close();
+            }, 250);
+        }
+    </script>
+</body>
+</html>
